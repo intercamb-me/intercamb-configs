@@ -2,11 +2,6 @@
 
 set -e
 
-if [ "$(whoami)" != "intercambio" ]; then
-  echo "This script must be executed with the user intercambio"
-  exit 1
-fi
-
 if [ -z "$INTERCAMBIO_HOME" ]; then
   echo "Enrivonment variable with name INTERCAMBIO_HOME is required"
   exit 1

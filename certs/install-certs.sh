@@ -16,7 +16,4 @@ sudo letsencrypt certonly --standalone -d api.intercamb.me
 echo "Installing www.intercamb.me certificate..."
 sudo letsencrypt certonly --standalone -d www.intercamb.me
 
-echo "Installing webcm.intercamb.me certificate..."
-sudo letsencrypt certonly --standalone -d webcm.intercamb.me
-
 echo "Certificates installed with success!"

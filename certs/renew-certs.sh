@@ -32,9 +32,4 @@ echo ""
 sudo letsencrypt certonly -n --webroot -w $INTERCAMBIO_HOME/data/letsencrypt -d www.intercamb.me
 
 echo ""
-echo "4º Renewing webcm.intercamb.me certificate..."
-echo ""
-sudo letsencrypt certonly -n --webroot -w $INTERCAMBIO_HOME/data/letsencrypt -d webcm.intercamb.me
-
-echo ""
 echo "Certificates renewed with success!"
