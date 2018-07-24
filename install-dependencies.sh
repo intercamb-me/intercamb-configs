@@ -21,19 +21,23 @@ echo "Installing dependencies..."
 printf "\n\n"
 sleep 5
 
-$INTERCAMBIO_HOME/apps/intercambio-configs/certs/install-letsencrypt.sh
+$INTERCAMBIO_HOME/apps/intercambio-configs/dependencies/install-node.sh
 printf "\n\n"
 sleep 5
 
-$INTERCAMBIO_HOME/apps/intercambio-configs/docker/install-docker.sh
+$INTERCAMBIO_HOME/apps/intercambio-configs/dependencies/install-docker.sh
 printf "\n\n"
 sleep 5
 
-$INTERCAMBIO_HOME/apps/intercambio-configs/docker/install-docker-compose.sh
+$INTERCAMBIO_HOME/apps/intercambio-configs/dependencies/install-docker-compose.sh
 printf "\n\n"
 sleep 5
 
 $INTERCAMBIO_HOME/apps/intercambio-configs/dependencies/install-awscli.sh
+printf "\n\n"
+sleep 5
+
+$INTERCAMBIO_HOME/apps/intercambio-configs/dependencies/install-letsencrypt.sh
 printf "\n\n"
 sleep 5
 

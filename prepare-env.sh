@@ -21,15 +21,6 @@ echo "Preparing environment..."
 printf "\n\n"
 sleep 5
 
-echo "Creating base directories..."
-mkdir -p $INTERCAMBIO_HOME/public
-mkdir -p $INTERCAMBIO_HOME/configs
-mkdir -p $INTERCAMBIO_HOME/data
-mkdir -p $INTERCAMBIO_HOME/data/letsencrypt
-mkdir -p $INTERCAMBIO_HOME/logs
-printf "\n\n"
-sleep 5
-
 $INTERCAMBIO_HOME/apps/intercambio-configs/certs/install-certs.sh
 printf "\n\n"
 sleep 5

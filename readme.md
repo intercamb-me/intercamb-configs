@@ -13,7 +13,7 @@ docker/install-docker.sh
 docker/install-docker-compose.sh
 ````
 
-### Pulling Intercambio Images ###
+### Pulling Intercambio images ###
 
 Intercambio images are stored on Amazon ECR. To pull the images just run the following command:
 ````
@@ -56,12 +56,12 @@ docker/create-container.sh intercambio/intercambio-website
 certs/install-letsencrypt.sh
 ````
 
-#### Installing certificates ####
+#### Installing Certificates ####
 ````
 certs/install-certs.sh
 ````
 
-#### Renewing certificates (cron task) ####
+#### Renewing Certificates (cron task) ####
 ````
 certs/install-certs-tasks.sh
 ````
@@ -76,7 +76,7 @@ docker/mongo/connect.sh
 
 ### Security ###
 
-#### Creating administrator and user ####
+#### Creating Administrator and User ####
 
 Don't forget to replace the password token by the user password.
 ````
