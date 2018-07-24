@@ -7,8 +7,8 @@ if [ -z "$INTERCAMBIO_HOME" ]; then
   exit 1
 fi
 
-if [ -z "$INTERCAMBIO_REGISTRY" ]; then
-  echo "Enrivonment variable with name INTERCAMBIO_REGISTRY is required"
+if [ -z "$INTERCAMBIO_ECR_REGISTRY" ]; then
+  echo "Enrivonment variable with name INTERCAMBIO_ECR_REGISTRY is required"
   exit 1
 fi
 
