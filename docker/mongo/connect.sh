@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm -it --network intercambio-network mongo:3.4.10 mongo --host mongo
+docker run --rm -it --network intercambio-network mongo:4.1.1 mongo --host mongo
