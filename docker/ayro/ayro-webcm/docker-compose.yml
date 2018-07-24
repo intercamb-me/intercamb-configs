@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  intercambio-webcm:
+    << : *common
+    image: "intercambio-webcm:latest"
+    container_name: "intercambio-webcm"
+    hostname: "intercambio-webcm"
+    volumes:
+      - "${INTERCAMBIO_HOME}/configs/intercambio-webcm.yml:/usr/src/intercambio-webcm/config.yml"
+    networks:
+      default:
+        ipv4_address: "172.28.5.2"

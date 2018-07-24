@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  redis:
+    << : *common
+    image: "redis:4.0.5-alpine"
+    container_name: "redis"
+    hostname: "intercambio-redis"
+    restart: "always"
+    volumes:
+      - "${INTERCAMBIO_HOME}/apps/intercambio-configs/docker/redis/default.conf:/usr/local/etc/redis/redis.conf"
+      - "${INTERCAMBIO_HOME}/data/redis:/data"
+    command: "redis-server /usr/local/etc/redis/redis.conf"
+    networks:
+      default:
+        ipv4_address: "172.28.5.12"

@@ -1,0 +1,15 @@
+version: "3.4"
+x-common:
+  &common
+    extra_hosts:
+      - "intercambio:172.28.5.1"
+      - "intercambio-webcm:172.28.5.2"
+      - "intercambio-website:172.28.5.3"
+      - "intercambio-prerender:172.28.5.4"
+      - "intercambio-nginx:172.28.5.10"
+      - "intercambio-mongo:172.28.5.11"
+      - "intercambio-redis:172.28.5.12"
+networks:
+  default:
+    external:
+      name: "intercambio-network"

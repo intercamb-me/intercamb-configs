@@ -1,0 +1,18 @@
+version: "3.4"
+services:
+  nginx:
+    << : *common
+    image: "nginx:1.13.7-alpine"
+    container_name: "nginx"
+    hostname: "intercambio-nginx"
+    restart: "always"
+    volumes:
+      - "${INTERCAMBIO_HOME}/apps/intercambio-configs/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+      - "${INTERCAMBIO_HOME}/data/letsencrypt:/data/letsencrypt"
+      - "/etc/letsencrypt:/etc/letsencrypt"
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      default:
+        ipv4_address: "172.28.5.10"

@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+  intercambio:
+    << : *common
+    image: "intercambio:latest"
+    container_name: "intercambio"
+    hostname: "intercambio"
+    volumes:
+      - "${INTERCAMBIO_HOME}/configs/intercambio.yml:/usr/src/intercambio/config.yml"
+      - "${INTERCAMBIO_HOME}/public:/usr/src/intercambio/public"
+    networks:
+      default:
+        ipv4_address: "172.28.5.1"

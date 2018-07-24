@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  intercambio-prerender:
+    << : *common
+    image: "intercambio-prerender:latest"
+    container_name: "intercambio-prerender"
+    hostname: "intercambio-prerender"
+    volumes:
+      - "${INTERCAMBIO_HOME}/configs/intercambio-prerender.yml:/usr/src/intercambio-prerender/config.yml"
+    networks:
+      default:
+        ipv4_address: "172.28.5.4"
