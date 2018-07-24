@@ -25,10 +25,6 @@ sudo apt-get install python
 printf "\n\n"
 sleep 5
 
-$INTERCAMBIO_HOME/apps/intercambio-configs/dependencies/install-node.sh
-printf "\n\n"
-sleep 5
-
 $INTERCAMBIO_HOME/apps/intercambio-configs/dependencies/install-docker.sh
 printf "\n\n"
 sleep 5
