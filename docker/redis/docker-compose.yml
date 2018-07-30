@@ -12,4 +12,4 @@ services:
     command: "redis-server /usr/local/etc/redis/redis.conf"
     networks:
       default:
-        ipv4_address: "172.28.5.12"
+        ipv4_address: "172.30.5.12"

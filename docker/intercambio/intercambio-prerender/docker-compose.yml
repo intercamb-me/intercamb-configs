@@ -9,4 +9,4 @@ services:
       - "${INTERCAMBIO_HOME}/configs/intercambio-prerender.yml:/usr/src/intercambio-prerender/config.yml"
     networks:
       default:
-        ipv4_address: "172.28.5.3"
+        ipv4_address: "172.30.5.3"

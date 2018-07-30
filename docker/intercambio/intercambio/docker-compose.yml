@@ -10,4 +10,4 @@ services:
       - "${INTERCAMBIO_HOME}/public:/usr/src/intercambio/public"
     networks:
       default:
-        ipv4_address: "172.28.5.1"
+        ipv4_address: "172.30.5.1"

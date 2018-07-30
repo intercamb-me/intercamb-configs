@@ -9,4 +9,4 @@ services:
       - "${INTERCAMBIO_HOME}/configs/intercambio-website.yml:/usr/src/intercambio-website/server/config.yml"
     networks:
       default:
-        ipv4_address: "172.28.5.2"
+        ipv4_address: "172.30.5.2"

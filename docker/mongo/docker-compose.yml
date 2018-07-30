@@ -12,4 +12,4 @@ services:
     command: "mongod --config /usr/local/etc/mongo/mongod.conf"
     networks:
       default:
-        ipv4_address: "172.28.5.11"
+        ipv4_address: "172.30.5.11"
