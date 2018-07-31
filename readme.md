@@ -66,7 +66,6 @@ certs/install-certs-tasks.sh
 ## Mongo Container ##
 
 ### Opening the Shell ###
-
 ````
 docker/mongo/connect.sh
 ````
