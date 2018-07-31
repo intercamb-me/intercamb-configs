@@ -2,31 +2,31 @@
 
 set -e
 
-if [ -z "$INTERCAMBIO_HOME" ]; then
-  echo "Enrivonment variable with name INTERCAMBIO_HOME is required"
+if [ -z "$INTERCAMB_HOME" ]; then
+  echo "Enrivonment variable with name INTERCAMB_HOME is required"
   exit 1
 fi
 
-if [ -z "$INTERCAMBIO_ECR_REGISTRY" ]; then
-  echo "Enrivonment variable with name INTERCAMBIO_ECR_REGISTRY is required"
+if [ -z "$INTERCAMB_ECR_REGISTRY" ]; then
+  echo "Enrivonment variable with name INTERCAMB_ECR_REGISTRY is required"
   exit 1
 fi
 
-if [ ! -d "$INTERCAMBIO_HOME/apps/intercambio-configs" ]; then
-  echo "The project intercambio-configs must be located in $INTERCAMBIO_HOME/apps"
+if [ ! -d "$INTERCAMB_HOME/apps/intercamb-configs" ]; then
+  echo "The project intercamb-configs must be located in $INTERCAMB_HOME/apps"
   exit 1
 fi
 
 if [ $# != 1 ]; then
   echo "Usage: $0 <image_name>"
-  echo "Examples: $0 intercambio/intercambio"
+  echo "Examples: $0 intercamb/intercamb"
   echo "          $0 redis"
   exit 1
 fi
 
 echo "Creating container $1..."
 
-cd $INTERCAMBIO_HOME/apps/intercambio-configs/docker
+cd $INTERCAMB_HOME/apps/intercamb-configs/docker
 cat docker-compose-override.yml $1/docker-compose.yml > docker-compose.yml
 docker-compose up -d
 rm docker-compose.yml

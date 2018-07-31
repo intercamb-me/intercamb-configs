@@ -2,8 +2,8 @@
 
 set -e
 
-if [ -z "$INTERCAMBIO_HOME" ]; then
-  echo "Enrivonment variable with name INTERCAMBIO_HOME is required"
+if [ -z "$INTERCAMB_HOME" ]; then
+  echo "Enrivonment variable with name INTERCAMB_HOME is required"
   exit 1
 fi
 

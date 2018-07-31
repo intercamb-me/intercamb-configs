@@ -1,12 +1,12 @@
 version: "3.6"
 services:
-  intercambio-prerender:
+  intercamb-prerender:
     << : *common
-    image: "intercambio-prerender:latest"
-    container_name: "intercambio-prerender"
-    hostname: "intercambio-prerender"
+    image: "intercamb-prerender:latest"
+    container_name: "intercamb-prerender"
+    hostname: "intercamb-prerender"
     volumes:
-      - "${INTERCAMBIO_HOME}/configs/intercambio-prerender.yml:/usr/src/intercambio-prerender/config.yml"
+      - "${INTERCAMB_HOME}/configs/intercamb-prerender.yml:/usr/src/intercamb-prerender/config.yml"
     networks:
       default:
         ipv4_address: "172.30.5.3"

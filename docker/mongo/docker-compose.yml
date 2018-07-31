@@ -4,11 +4,11 @@ services:
     << : *common
     image: "mongo:4.1.1"
     container_name: "mongo"
-    hostname: "intercambio-mongo"
+    hostname: "intercamb-mongo"
     restart: "always"
     volumes:
-      - "${INTERCAMBIO_HOME}/apps/intercambio-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
-      - "${INTERCAMBIO_HOME}/data/mongo:/data/db"
+      - "${INTERCAMB_HOME}/apps/intercamb-configs/docker/mongo/default.conf:/usr/local/etc/mongo/mongod.conf"
+      - "${INTERCAMB_HOME}/data/mongo:/data/db"
     command: "mongod --config /usr/local/etc/mongo/mongod.conf"
     networks:
       default:

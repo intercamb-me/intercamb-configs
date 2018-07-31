@@ -13,16 +13,16 @@ docker/install-docker.sh
 docker/install-docker-compose.sh
 ````
 
-### Pulling Intercambio images ###
+### Pulling Intercamb.me images ###
 
-Intercambio images are stored on Amazon ECR. To pull the images just run the following command:
+Intercamb.me images are stored on Amazon ECR. To pull the images just run the following command:
 ````
 docker/pull-images.sh
 ````
 
 ### Running Containers ###
 
-First you need to create the Intercambio network on Docker:
+First you need to create the Intercamb.me network on Docker:
 ````
 docker/create-network.sh
 ````
@@ -37,14 +37,11 @@ docker/create-container.sh mongo
 // Please read "Redis Container" session before
 docker/create-container.sh redis
 
-// Please read "Intercambio Container" session before
-docker/create-container.sh intercambio/intercambio
+// Please read "Intercamb.me Container" session before
+docker/create-container.sh intercamb/intercamb
 
-// Please read "Intercambio Webcm Container" session before
-docker/create-container.sh intercambio/intercambio-webcm
-
-// Please read "Intercambio Website Container" session before
-docker/create-container.sh intercambio/intercambio-website
+// Please read "Intercamb.me Website Container" session before
+docker/create-container.sh intercamb/intercamb-website
 ````
 
 ## Nginx Container ##
@@ -90,11 +87,11 @@ db.createUser({
   }]
 })
 db.createUser({
-  user: "intercambio",
+  user: "intercamb",
   pwd: "<password>",
   roles: [{
       role : "readWrite",
-      db : "intercambio"
+      db : "intercamb"
   }]
 })
 ````
@@ -107,17 +104,12 @@ db.createUser({
 docker/redis/connect.sh
 ````
 
-## Intercambio Container ##
+## Intercamb.me Container ##
 
-The project configuration file is exported as a Docker volume on $INTERCAMBIO_HOME/configs/intercambio.config.
+The project configuration file is exported as a Docker volume on $INTERCAMB_HOME/configs/intercamb.config.
 This file must be created before running the container.
 
-## Intercambio Webcm Container ##
+## Intercamb.me Website Container ##
 
-The project configuration file is exported as a Docker volume on $INTERCAMBIO_HOME/configs/intercambio-webcm.config.
-This file must be created before running the container.
-
-## Intercambio Website Container ##
-
-The project configuration file is exported as a Docker volume on $INTERCAMBIO_HOME/configs/intercambio-website.config.
+The project configuration file is exported as a Docker volume on $INTERCAMB_HOME/configs/intercamb-website.config.
 This file must be created before running the container.

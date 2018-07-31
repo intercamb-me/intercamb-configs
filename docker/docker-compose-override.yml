@@ -2,13 +2,13 @@ version: "3.6"
 x-common:
   &common
     extra_hosts:
-      - "intercambio:172.30.5.1"
-      - "intercambio-website:172.30.5.2"
-      - "intercambio-prerender:172.30.5.3"
-      - "intercambio-nginx:172.30.5.10"
-      - "intercambio-mongo:172.30.5.11"
-      - "intercambio-redis:172.30.5.12"
+      - "intercamb:172.30.5.1"
+      - "intercamb-website:172.30.5.2"
+      - "intercamb-prerender:172.30.5.3"
+      - "intercamb-nginx:172.30.5.10"
+      - "intercamb-mongo:172.30.5.11"
+      - "intercamb-redis:172.30.5.12"
 networks:
   default:
     external:
-      name: "intercambio-network"
+      name: "intercamb-network"

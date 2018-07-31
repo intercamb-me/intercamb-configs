@@ -1,13 +1,13 @@
 version: "3.6"
 services:
-  intercambio:
+  intercamb:
     << : *common
-    image: "intercambio:latest"
-    container_name: "intercambio"
-    hostname: "intercambio"
+    image: "intercamb:latest"
+    container_name: "intercamb"
+    hostname: "intercamb"
     volumes:
-      - "${INTERCAMBIO_HOME}/configs/intercambio.yml:/usr/src/intercambio/config.yml"
-      - "${INTERCAMBIO_HOME}/public:/usr/src/intercambio/public"
+      - "${INTERCAMB_HOME}/configs/intercamb.yml:/usr/src/intercamb/config.yml"
+      - "${INTERCAMB_HOME}/public:/usr/src/intercamb/public"
     networks:
       default:
         ipv4_address: "172.30.5.1"

@@ -2,18 +2,18 @@
 
 set -e
 
-if [ "$(whoami)" != "intercambio" ]; then
-  echo "This script must be executed with the user intercambio"
+if [ "$(whoami)" != "intercamb" ]; then
+  echo "This script must be executed with the user intercamb"
   exit 1
 fi
 
-if [ -z "$INTERCAMBIO_HOME" ]; then
-  echo "Enrivonment variable with name INTERCAMBIO_HOME is required"
+if [ -z "$INTERCAMB_HOME" ]; then
+  echo "Enrivonment variable with name INTERCAMB_HOME is required"
   exit 1
 fi
 
-if [ ! -d "$INTERCAMBIO_HOME/apps/intercambio-configs" ]; then
-  echo "The project intercambio-configs must be located in $INTERCAMBIO_HOME/apps"
+if [ ! -d "$INTERCAMB_HOME/apps/intercamb-configs" ]; then
+  echo "The project intercamb-configs must be located in $INTERCAMB_HOME/apps"
   exit 1
 fi
 
@@ -21,15 +21,15 @@ echo "Preparing environment..."
 printf "\n\n"
 sleep 5
 
-$INTERCAMBIO_HOME/apps/intercambio-configs/certs/install-certs.sh
+$INTERCAMB_HOME/apps/intercamb-configs/certs/install-certs.sh
 printf "\n\n"
 sleep 5
 
-$INTERCAMBIO_HOME/apps/intercambio-configs/certs/install-certs-tasks.sh
+$INTERCAMB_HOME/apps/intercamb-configs/certs/install-certs-tasks.sh
 printf "\n\n"
 sleep 5
 
-$INTERCAMBIO_HOME/apps/intercambio-configs/docker/create-network.sh
+$INTERCAMB_HOME/apps/intercamb-configs/docker/create-network.sh
 printf "\n\n"
 sleep 5
 
