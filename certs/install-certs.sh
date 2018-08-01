@@ -8,12 +8,12 @@ if [ -z "$INTERCAMB_HOME" ]; then
 fi
 
 echo "Installing intercamb.me certificate..."
-sudo letsencrypt certonly --nginx -d intercamb.me
+sudo letsencrypt certonly --standalone -d intercamb.me
 
 echo "Installing api.intercamb.me certificate..."
-sudo letsencrypt certonly --nginx -d api.intercamb.me
+sudo letsencrypt certonly --standalone -d api.intercamb.me
 
 echo "Installing www.intercamb.me certificate..."
-sudo letsencrypt certonly --nginx -d www.intercamb.me
+sudo letsencrypt certonly --standalone -d www.intercamb.me
 
 echo "Certificates installed with success!"
