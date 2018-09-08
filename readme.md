@@ -22,7 +22,7 @@ docker/pull-images.sh
 
 ### Running Containers ###
 
-First you need to create the Intercamb.me network on Docker:
+First you need to create the network "intercamb-network" on Docker:
 ````
 docker/create-network.sh
 ````
@@ -60,7 +60,7 @@ certs/install-certs.sh
 
 #### Renewing Certificates (cron task) ####
 ````
-certs/install-certs-tasks.sh
+certs/install-certs-tasks.sh (with user root)
 ````
 
 ## Mongo Container ##
