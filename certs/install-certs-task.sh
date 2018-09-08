@@ -13,7 +13,7 @@ if [ -z "$INTERCAMB_HOME" ]; then
   exit 1
 fi
 
-echo "Installing certificate cron task..."
+echo "Installing certificates cron task..."
 
 CRON_RENEW_CMD="$INTERCAMB_HOME/apps/intercamb-configs/certs/renew-certs.sh"
 CRON_RENEW_JOB="0 0 * * * $CRON_RENEW_CMD"
@@ -21,6 +21,12 @@ CRON_RENEW_JOB="0 0 * * * $CRON_RENEW_CMD"
 (crontab -l | grep -v -F "$CRON_RENEW_CMD") | crontab - || true
 (crontab -l | grep -v -F "$CRON_RENEW_CMD" ; echo "$CRON_RENEW_JOB") | crontab - || true
 
-echo "Certificate cron task was installed with success!"
-echo "Current tasks:"
-crontab -l
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Certificate cron task was installed with success!"
+  echo "Current tasks:"
+  crontab -l
+else
+  echo "Error installing certificates cron task!"
+fi

@@ -22,4 +22,15 @@ mkdir -p $INTERCAMB_HOME/logs
 mkdir -p $INTERCAMB_HOME/public
 mkdir -p $INTERCAMB_HOME/tools
 
-echo "Directory tree created with success!"
+mkdir -p $HOME/.backups
+touch $HOME/.backups/credentials
+chmod 700 $HOME/.backups
+chmod 600 $HOME/.backups/credentials
+
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Directory tree created with success!"
+else
+  echo "Error creating directory tree!"
+fi

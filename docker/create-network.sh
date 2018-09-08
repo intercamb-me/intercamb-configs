@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Creating Intercamb.me network on Docker..."
+echo "Creating a Docker network called intercamb-network..."
 
 docker network create \
   --driver bridge \
@@ -11,4 +11,10 @@ docker network create \
   --gateway 172.30.5.254 \
   intercamb-network
 
-echo "Intercamb.me network was created with success!"
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Network intercamb-network was created with success!"
+else
+  echo "Error creating network intercamb-network!"
+fi

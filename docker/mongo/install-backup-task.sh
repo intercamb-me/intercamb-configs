@@ -16,6 +16,12 @@ CRON_BACKUP_JOB="0 0 * * * $CRON_BACKUP_CMD"
 (crontab -l | grep -v -F "$CRON_BACKUP_CMD") | crontab - || true
 (crontab -l | grep -v -F "$CRON_BACKUP_CMD" ; echo "$CRON_BACKUP_JOB") | crontab - || true
 
-echo "Mongo backup cron task was installed with success!"
-echo "Current tasks:"
-crontab -l
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Mongo backup cron task was installed with success!"
+  echo "Current tasks:"
+  crontab -l
+else
+  echo "Error installing Mongo backup cron task!"
+fi

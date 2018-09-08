@@ -19,4 +19,10 @@ echo "export INTERCAMB_ECR_REGION=\"$INTERCAMB_ECR_REGION\"" | sudo tee --append
 echo "" | sudo tee --append /home/intercamb/.profile > /dev/null
 echo "cd \$INTERCAMB_HOME" | sudo tee --append /home/intercamb/.profile > /dev/null
 
-echo "User intercamb created with success!"
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "User intercamb created with success!"
+else
+  echo "Error creating user intercamb!"
+fi

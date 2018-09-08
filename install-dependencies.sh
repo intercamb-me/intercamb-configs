@@ -41,5 +41,11 @@ $INTERCAMB_HOME/apps/intercamb-configs/dependencies/install-letsencrypt.sh
 printf "\n\n"
 sleep 5
 
-echo "Dependencies installed with success!"
-echo "Please log out and log back in with the user $USER."
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Dependencies installed with success!"
+  echo "Please log out and log back in with the user $USER."
+else
+  echo "Error installing dependencies!"
+fi

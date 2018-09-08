@@ -10,6 +10,11 @@ if [ -z "$INTERCAMB_HOME" ]; then
   exit 1
 fi
 
+if [ -z "$MONGO_PASSWORD" ]; then
+  echo "Enrivonment variable with name MONGO_PASSWORD is required"
+  exit 1
+fi
+
 exec &> $INTERCAMB_HOME/logs/mongo-backup.log
 
 echo ""

@@ -9,4 +9,10 @@ python get-pip.py --user
 rm get-pip.py
 ~/.local/bin/pip install awscli --upgrade --user
 
-echo "AWS client was installed with success!"
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "AWS client was installed with success!"
+else
+  echo "Error installing AWS client!"
+fi

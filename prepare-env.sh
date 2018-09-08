@@ -33,4 +33,10 @@ $INTERCAMB_HOME/apps/intercamb-configs/docker/create-network.sh
 printf "\n\n"
 sleep 5
 
-echo "Enrivonment prepared with success!"
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Enrivonment prepared with success!"
+else
+  echo "Error preparing environment!"
+fi

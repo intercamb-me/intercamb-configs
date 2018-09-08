@@ -31,4 +31,10 @@ cat docker-compose-override.yml $1/docker-compose.yml > docker-compose.yml
 docker-compose up -d
 rm docker-compose.yml
 
-echo "Container $1 was created with success!"
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Container $1 was created with success!"
+else
+  echo "Error creating container $1!"
+fi

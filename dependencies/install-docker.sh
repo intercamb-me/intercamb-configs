@@ -11,4 +11,10 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install docker-ce
 
-echo "Docker installed with success!"
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Docker installed with success!"
+else
+  echo "Error installing Docker!"
+fi

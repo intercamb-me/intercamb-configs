@@ -35,4 +35,11 @@ docker tag $INTERCAMB_ECR_REGISTRY/intercamb/intercamb-website:latest intercamb-
 # docker pull $INTERCAMB_ECR_REGISTRY/intercamb/intercamb-prerender:latest
 # docker tag $INTERCAMB_ECR_REGISTRY/intercamb/intercamb-prerender:latest intercamb-prerender:latest
 
-echo "Images pulled with success!"
+echo ""
+if [ $? -eq 0 ]
+then
+  echo "Images pulled with success!"
+else
+  echo "Error pulling images!"
+fi
+
