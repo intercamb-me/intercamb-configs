@@ -17,9 +17,4 @@ echo "Installing www.intercamb.me certificate..."
 sudo letsencrypt certonly --standalone -d www.intercamb.me
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Certificates installed with success!"
-else
-  echo "Error installing certificates!"
-fi
+echo "Certificates installed with success!"

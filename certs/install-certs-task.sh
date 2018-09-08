@@ -22,11 +22,6 @@ CRON_RENEW_JOB="0 0 * * * $CRON_RENEW_CMD"
 (crontab -l | grep -v -F "$CRON_RENEW_CMD" ; echo "$CRON_RENEW_JOB") | crontab - || true
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Certificate cron task was installed with success!"
-  echo "Current tasks:"
-  crontab -l
-else
-  echo "Error installing certificates cron task!"
-fi
+echo "Certificate cron task was installed with success!"
+echo "Current tasks:"
+crontab -l

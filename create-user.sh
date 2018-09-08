@@ -20,9 +20,4 @@ echo "" | sudo tee --append /home/intercamb/.profile > /dev/null
 echo "cd \$INTERCAMB_HOME" | sudo tee --append /home/intercamb/.profile > /dev/null
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "User intercamb created with success!"
-else
-  echo "Error creating user intercamb!"
-fi
+echo "User intercamb created with success!"

@@ -28,9 +28,4 @@ chmod 700 $HOME/.backups
 chmod 600 $HOME/.backups/credentials
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Directory tree created with success!"
-else
-  echo "Error creating directory tree!"
-fi
+echo "Directory tree created with success!"

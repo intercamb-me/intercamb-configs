@@ -32,9 +32,4 @@ docker-compose up -d
 rm docker-compose.yml
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Container $1 was created with success!"
-else
-  echo "Error creating container $1!"
-fi
+echo "Container $1 was created with success!"

@@ -12,9 +12,4 @@ docker network create \
   intercamb-network
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Network intercamb-network was created with success!"
-else
-  echo "Error creating network intercamb-network!"
-fi
+echo "Network intercamb-network was created with success!"

@@ -32,9 +32,4 @@ echo ""
 sudo letsencrypt certonly -n --webroot -w $INTERCAMB_HOME/data/letsencrypt -d www.intercamb.me
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Certificates renewed with success!"
-else
-  echo "Error renewing certificates!"
-fi
+echo "Certificates renewed with success!"

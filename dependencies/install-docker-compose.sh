@@ -8,9 +8,4 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Docker Compose installed with success!"
-else
-  echo "Error installing Docker Compose!"
-fi
+echo "Docker Compose installed with success!"

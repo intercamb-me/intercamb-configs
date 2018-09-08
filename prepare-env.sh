@@ -34,9 +34,4 @@ printf "\n\n"
 sleep 5
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Enrivonment prepared with success!"
-else
-  echo "Error preparing environment!"
-fi
+echo "Enrivonment prepared with success!"

@@ -29,12 +29,7 @@ FILENAME=mongo-$(date "+%Y%m%d%H%M%S").bkp
 USERNAME=intercamb
 
 # Dump from Mongo and upload to S3
-docker run --rm -it --network intercamb-network mongo:4.1.1 mongodump --host mongo --db $DATABASE --username $USERNAME --password $MONGO_PASSWORD --authenticationDatabase admin --archive --gzip | aws s3 cp - s3://$BUCKET/$FILENAME
+docker run --rm --network intercamb-network mongo:4.1.1 mongodump --host mongo --db $DATABASE --username $USERNAME --password $MONGO_PASSWORD --authenticationDatabase admin --gzip --archive | aws s3 cp - s3://$BUCKET/$FILENAME
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Backup generated and uploaded to S3 with success!"
-else
-  echo "Error generating backup or uploading to S3!"
-fi
+echo "Backup generated and uploaded to S3 with success!"

@@ -12,9 +12,4 @@ sudo apt-get update
 sudo apt-get install docker-ce
 
 echo ""
-if [ $? -eq 0 ]
-then
-  echo "Docker installed with success!"
-else
-  echo "Error installing Docker!"
-fi
+echo "Docker installed with success!"
