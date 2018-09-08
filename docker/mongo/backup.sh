@@ -18,9 +18,9 @@ fi
 exec &> $INTERCAMB_HOME/logs/mongo-backup.log
 
 echo ""
-echo "###############################################################"
+echo "#############################################################"
 echo "## Generating Mongo backup at $(date) ##"
-echo "###############################################################"
+echo "#############################################################"
 echo ""
 
 DATABASE=intercamb
@@ -29,7 +29,7 @@ FILENAME=mongo-$(date "+%Y%m%d%H%M%S").bkp
 USERNAME=intercamb
 
 # Dump from Mongo and upload to S3
-docker run --rm -it --network intercamb-network mongo:4.1.1 mongodump --host mongo --db $DATABASE --username $USERNAME --password $MONGO_PASSWORD --archive --gzip | aws s3 cp - s3://$BUCKET/$FILENAME
+docker run --rm -it --network intercamb-network mongo:4.1.1 mongodump --host mongo --db $DATABASE --username $USERNAME --password $MONGO_PASSWORD --authenticationDatabase admin --archive --gzip | aws s3 cp - s3://$BUCKET/$FILENAME
 
 echo ""
 if [ $? -eq 0 ]
